@@ -1,0 +1,168 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="MyProject.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <%-- bootstrap css --%>
+    <link href="bootstap/css/bootstrap.min.css" rel="stylesheet" />
+    <%-- datatables css --%>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <%-- fontawesome css  --%>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <%-- customcss --%>
+    <link href="css/CustomStyleSheets.css" rel="stylesheet" type="text/css" media="screen" runat="server" asp-fallback-test-value="absolute" />
+    <%-- flipcard-css --%>
+    <link href="Flipcard.css" rel="stylesheet" />
+    <%-- jquery  --%>
+    <script src="bootstap/js/jquery.min.js"></script>
+    <%-- popper js  --%>
+    <script src="bootstap/js/popper.min.js"></script>
+    <%-- bootstrap js --%>
+    <script src="bootstap/js/bootstrap.min.js"></script>
+    <%-- bootstrap bundle js --%>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <%-- Admin Dashboard script starts here --%>
+    
+    <%-- Admin Dashboard script ends here --%>
+
+   
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="margin:0">
+    <form  id="form1" runat="server" class="was-validated">
+        
+
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg align-items-center header-nav" style="background-color:#E6E6E6;border-radius:35px;margin-top:1px; padding-bottom:1px">
+                <div class="container-fluid ">
+
+                
+                <a class="navbar-brand" href="#" style="color:#8b008b;font-weight:700" >
+                    <img src="imgs/SRM%20Logo.jpg" width="30" height="30"/>
+                    SRM Arts & Science College
+                </a>
+                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsiveSmall" aria-controls="navbarResponsiveSmall" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+                 <div class="collapse navbar-collapse " id="navbarResponsiveSmall">
+      <ul class="navbar-nav  me-auto mb-2 mb-lg-0 ">
+        <li class="nav-item ">
+            <asp:LinkButton ID="LinkButton4" runat="server" href="HomePage.aspx" class="nav-link navhomecolor" style="color:#8b008b;font-weight:600">Home</asp:LinkButton>
+          
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link navaboutuscolor" href="#" style="color:#8b008b;font-weight:600">AboutUs</a>
+        </li>
+          <li class="nav-item ">
+          <a class="nav-link navcontactuscolor" href="#" style="color:#8b008b;font-weight:600">ContactUs</a>
+        </li>               
+      </ul>    
+         <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item signincolor ">
+            <asp:LinkButton class="nav-link" ID="LinkButton1" style="color:#8b008b;text-decoration:none;font-weight:600" runat="server" href="StudentLogIn.aspx">Student LogIn</asp:LinkButton>
+        </li>
+             <li class="nav-item signincolor">
+                 <asp:LinkButton class="nav-link" ID="LinkButton2" style="color:#8b008b;text-decoration:none;font-weight:600" href="StaffLogIn.aspx" runat="server">Staff LogIn</asp:LinkButton>
+             </li>
+             <li class="nav-item signincolor">
+                 <asp:LinkButton class="nav-link" ID="LinkButton3" style="color:#8b008b;text-decoration:none;font-weight:600" runat="server" Visible="False" OnClick="LinkButton3_Click">Sign Out</asp:LinkButton>
+             </li>
+             
+      </ul>    
+    </div>
+                   </div> 
+            </nav>
+            </div>
+            <div class="row">
+                <!-- Main Content Placeholder -->
+        <div style="margin-top:3%">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+        <!-- Main Content Placeholder -->
+            </div>
+            <div class="row">
+                 <!-- Footer -->
+        <footer class="footercolor" style="border-top-left-radius:15px;border-top-right-radius:15px" >
+            <div id="footer1" class="container-fluid ">
+               <div class="container-fluid top-footer p-md-3 p-1">
+      <div class="row">
+        <div class="col-md-3 pl-4 pr-4">
+          <img class="img-fluid" src="imgs/logo_text_white_small.png" alt="">
+          <h6 style="color:#8b008b">
+            SRM Nagar, Kattankulathur, Chengalpattu Dist -603 203<br />
+Ph: 044-27454862/4863/1456
+          </h6>
+          
+        </div>
+
+        <div class="col-md-3  pl-4 pr-4" style="color:#8b008b">
+          <h3>Important Links</h3>
+          <a href="#">Privacy Policy</a><br>          
+          <a href="#">Blog Articles </a><br>
+        </div>
+
+        <div class="col-md-3  pl-4 pr-4" style="color:#8b008b">
+          <h3>Social Platforms</h3>
+            <br />
+          <a style="color:#8b008b;" class="p-1" href="https://www.facebook.com/srmasc.ac.in/?ref=bookmarks"><i class="fab fa-2x fa-facebook-square"></i></a>     
+          <a style="color: #8b008b;" class="p-1" href="https://twitter.com/srm_asc"><i class="fab fa-2x fa-twitter-square"></i></a>
+          <a style="color: #8b008b;" class="p-1" href="https://www.instagram.com/srmartsandsciencecollege/"><i class="fab fa-2x fa-instagram"></i></a>
+        </div>
+     
+      <div class="col-md-3  pl-4 pr-4" style="color:#8b008b">
+          <h3>Contact Us</h3>
+          <a href="#"><i class="fas fa-phone"></i> +(91) 8939691482  </a><br>
+          <a href="#"><i class="fas fa-envelope"></i> Srmartsandscience(at)Yahoo.Co.In  </a><br>
+          <!-- 
+          <div class="embed-responsive embed-responsive-16by9">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.2697658849147!2d80.04137511482047!3d12.82583659095159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f70d7459c4e9%3A0x267b753b21de9672!2sSRM%20Arts%20and%20Science%20College!5e0!3m2!1sen!2sin!4v1661698843685!5m2!1sen!2sin" width="250" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+              -->
+          
+      </div>
+    </div>
+    </div>
+    <div class="container-fluid bottom-footer pt-2">
+      <div class="row">
+        <div class="col-12 text-center">
+          <p style="color:#8b008b;font-weight:500">Copyrights © 2022 - All rights reserved</p>
+        </div>
+      </div>
+    </div>
+            </div>
+           <!--Dashboard content starts -->
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var el = document.getElementById("wrapper");
+        var toggleButton = document.getElementById("menu-toggle-dashboard");
+
+        toggleButton.onclick = function () {
+            el.classList.toggle("toggled");
+        };
+    </script>
+            <!-- Dashboard content ends -->
+
+        </footer>
+        <!-- ./Footer -->
+            </div>
+        </div>
+            
+        
+        
+        
+
+       
+
+    </form>
+</body>
+</html>
